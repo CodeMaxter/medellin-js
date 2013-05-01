@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+
+        person = new Object(); 
+        person.name = "John Doe"; 
+        person.age = 30; 
+        person.gender = "male"
+
+        for (var property in person) {
+            alert(property + ': ' + person[property]);
+        }
+    </script>
+</body>
+</html>

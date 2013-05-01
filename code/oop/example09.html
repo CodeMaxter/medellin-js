@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        function Container(param) { 
+         
+            function dec() { 
+                if (secret > 0) { 
+                    secret -= 1; 
+                    return true; 
+                } else { 
+                    return false; 
+                } 
+            } 
+         
+            this.member = param; 
+            var secret = 3; 
+            var that = this;
+        }
+
+        Container.prototype.publicMethod = function() {
+            return this.secret;
+        }
+
+        container = new Container('John Doe');
+        alert('container.member: ' + container.member);
+        alert('secret: ' + container.secret);
+        alert('that: ' + container.that);
+        alert('publicMethod: ' + container.publicMethod());
+        alert('that: ' + container.dec());
+    </script>
+</body>
+</html>

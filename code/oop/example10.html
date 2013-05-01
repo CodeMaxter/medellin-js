@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        function Container(param) {
+
+            function dec() {
+                if (secret > 0) {
+                    secret -= 1;
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+
+            this.member = param;
+            var secret = 3;
+            var that = this;
+
+            this.service = function () {
+                return dec() ? that.member : null;
+            };
+        }
+
+        container = new Container('John Doe');
+        alert('container.service: ' + container.service());
+    </script>
+</body>
+</html>

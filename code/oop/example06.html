@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        function A() {
+            this.x = 1;
+
+            this.doIt = function() {    // Define Method
+                this.x += 1;
+            }
+        }
+         
+        function B() {
+            this.x = 1;
+            
+            this.doIt = function() {    // Define Method
+                this.x += 2;
+            }
+        }
+         
+        a = new A;
+        b = new B;
+         
+        a.doIt();
+        b.doIt();
+        alert(a.x + ', ' + b.x);
+    </script>
+</body>
+</html>

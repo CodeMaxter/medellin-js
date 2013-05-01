@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <script type="text/javascript" src="mootools-core.js"></script>
+
+	<script type="text/javascript">
+        var Animal = new Class({
+            initialize: function(age){
+                this.age = age;
+            }
+        });
+
+        var Cat = new Class({
+            Extends: Animal,
+            initialize: function(name, age){
+                this.parent(age); // calls initalize method of Animal class
+                this.name = name;
+            }
+        });
+
+        var myCat = new Cat('Micia', 20);
+        alert(myCat.name); // alerts 'Micia'.
+        alert(myCat.age); // alerts 20.
+        alert(myCat instanceof Cat);  // alerts true
+        alert(myCat instanceof Animal);  // alerts true
+    </script>
+</body>
+</html>

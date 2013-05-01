@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        function Person(name, lastName) { 
+            this.name = name; 
+            this.lastName = lastName; 
+
+            this.completeName = function() { 
+                return this.name + " " + this.lastName; 
+            } 
+        }
+
+        person = new Person("Alvaro", "Agamez"); 
+        alert(person.completeName()); 
+    </script>
+</body>
+</html>

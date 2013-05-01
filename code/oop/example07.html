@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        function A() {                        // Define super class
+            this.x = 1;
+        }
+         
+        A.prototype.doIt = function() {        // Define Method
+            this.x += 1;
+            alert('A.dotIt');
+        }
+         
+        B.prototype = new A;                // Define sub-class
+        B.prototype.constructor = B;
+        function B() {
+            A.call(this);                    // Call super-class constructor (if desired)
+            this.y = 2;
+        }
+         
+        B.prototype.doIt = function() {        // Define Method
+            A.prototype.doIt.call(this);    // Call super-class method (if desired)
+            this.y += 1;
+            alert('B.dotIt');
+        }
+         
+        b = new B;
+        alert((b instanceof A) + ', ' + (b instanceof B));
+
+        b.doIt();
+        alert(b.x + ', ' + b.y);
+    </script>
+</body>
+</html>

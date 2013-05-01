@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        litealObject = { 
+             name : "John", 
+             lastName: "doe", 
+             hobbies : ["Programming", "Basketball", "Video Games", "Cooking", "DIY"], 
+             getCompleteName : function() { 
+                 return this.name + " " + this.lastName; 
+             } 
+        };
+
+        alert(litealObject.getCompleteName());
+
+        var person = new litealObject;
+    </script>
+</body>
+</html>

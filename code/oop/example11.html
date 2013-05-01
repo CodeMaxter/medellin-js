@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        Array.prototype.occurrencesCount = function(word) {
+            occurrencesCount = 0;
+            for (index =0; index < this.length; index++) {
+                if (this[index] == word) {
+                    occurrencesCount++;
+                }
+            }
+            return occurrencesCount;
+        }
+        // Podemos usar el array siguiente:
+        var words = ["Alvaro", "JS", "CodeMaxter", "MedellinJS", "Ramm", "Fael"];
+        // O este
+        var words = Array("Alvaro", "JS", "CodeMaxter", "MedellinJS", "JS", "JS");
+        //Y luego
+        alert(words.occurrencesCount("JS"));
+    </script>
+</body>
+</html>

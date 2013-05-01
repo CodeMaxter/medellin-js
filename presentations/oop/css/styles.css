@@ -1,0 +1,41 @@
+#box-table-b {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+	font-size: 11px;
+	width: 480px;
+	text-align: center;
+	border-collapse: collapse;
+	border-top: 7px solid #9baff1;
+	border-bottom: 7px solid #9baff1;
+	margin: 0px;
+}
+#box-table-b th {
+	font-size: 11px;
+	font-weight: normal;
+	background: #e8edff;
+	border-right: 1px solid #9baff1;
+	border-left: 1px solid #9baff1;
+	border-bottom: 1px solid #9baff1;
+	color: #039;
+	padding: 0px;
+	margin: 0px;
+}
+#box-table-b td {
+	background: #e8edff;
+	border-right: 1px solid #aabcfe;
+	border-left: 1px solid #aabcfe;
+    border-bottom: 1px solid #9baff1;
+	color: #669;
+	padding: 0px;
+    margin: 0px;
+}
+
+.doTable {
+    font-size: 10px; !important;
+    border: 1px solid #FFF;
+    border-collapse: collapse;
+    margin-bottom: 5px;
+}
+
+.doTable td {
+    border: 1px solid #FFF;
+}

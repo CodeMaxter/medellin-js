@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+    <script type="text/javascript" src="Class.js"></script>
+
+	<script type="text/javascript">
+        var Person = Class.extend({
+            init: function(isDancing) {
+                this.dancing = isDancing;
+            },
+            dance: function() {
+                alert('Person dance');
+                return this.dancing;
+            }
+        });
+
+        var Ninja = Person.extend({
+            init: function(){
+                this._super(false);
+            },
+            dance: function(){
+                // Call the inherited version of dance()
+                alert('Ninja dance');
+                return this._super();
+            },
+            swingSword: function() {
+                alert('Ninja swingSword');
+                return true;
+            }
+        });
+
+        var p = new Person(true);
+        p.dance(); // => true
+
+        var n = new Ninja();
+        alert(n.dance()); // => false
+        alert(n.swingSword()); // => true
+
+        // Should all be true
+        alert(p instanceof Person && p instanceof Class &&
+        n instanceof Ninja && n instanceof Person && n instanceof Class);
+    </script>
+</body>
+</html>

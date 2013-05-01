@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+        Object.prototype.domain = "Eukaryota";
+         
+        function Mammalia()
+        {
+            this.hotBlood = true;
+            this.class = "Mammalia";
+        }
+         
+        Mammalia.prototype.mammalsGlands = true;
+         
+        Canidae.prototype = new Mammalia;            // Hook up Mammalia into Cannidae's prototype chain
+        Canidae.prototype.constructor = Mammalia;
+        function Canidae()
+        {
+            this.class = "Canidae";
+        }
+         
+        Canidae.prototype.canFly = false;
+         
+        canusLupus = new Canidae;
+        alert(canusLupus.domain + ', ' + canusLupus.class + ', ' + canusLupus.mammalsGlands + ', ' + canusLupus.hotBlood + ', ' + canusLupus.canFly);
+    </script>
+</body>
+</html>
